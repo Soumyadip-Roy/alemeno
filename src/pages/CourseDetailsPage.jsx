@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import ExpandableSyllabus from "../components/ExpandableSyllabus";
+import StatusBadge from "../components/StatusBadge";
 import { fetchCourses } from "../store/coursesSlice";
 
 function CourseDetailsPage() {
@@ -33,7 +34,8 @@ function CourseDetailsPage() {
       <div className='border p-4 rounded mb-6 flex flex-col md:flex-row'>
         <div className='flex-1'>
           <p className='mb-2'>
-            <strong>Enrollment Status:</strong> {course.enrollmentStatus}
+            <strong>Enrollment Status:</strong>{" "}
+            <StatusBadge status={course.enrollmentStatus} />
           </p>
           <p className='mb-2'>
             <strong>Duration:</strong> {course.duration}

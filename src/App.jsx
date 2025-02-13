@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import CourseListingPage from "./pages/CourseListingPage";
 import CourseDetailsPage from "./pages/CourseDetailsPage";
 import StudentDashboardPage from "./pages/StudentDashboardPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/course/:courseId' element={<CourseDetailsPage />} />
         <Route path='/dashboard' element={<StudentDashboardPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

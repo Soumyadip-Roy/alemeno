@@ -3,14 +3,19 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-between items-center mb-4'>
-      <Link to='/' className='text-xl font-bold'>
-        Course List
-      </Link>
-      <div>
-        <Link to='/dashboard' className='mr-4 hover:underline'>
-          Student Dashboard
+    <nav className='bg-blue-600 p-4'>
+      <div className='container mx-auto flex justify-between items-center'>
+        <Link to='/' className='text-white font-bold text-lg'>
+          Alemeno
         </Link>
+        <div className='flex space-x-4'>
+          <Link to='/' className='text-white hover:text-gray-200'>
+            Courses
+          </Link>
+          <Link to='/dashboard' className='text-white hover:text-gray-200'>
+            Dashboard
+          </Link>
+        </div>
       </div>
     </nav>
   );

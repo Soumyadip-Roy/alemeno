@@ -165,5 +165,3 @@ POST /api/courses
 - Modify `vite.config.js` if needed for proxy settings.
 
 ---
-
-This project is built to provide a seamless experience for students exploring courses and tracking progress dynamically.

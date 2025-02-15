@@ -21,10 +21,6 @@ function CourseDetailsPage() {
     }
   }, [courses, dispatch]);
 
-  // useEffect(() => {
-  //   dispatch(fetchCourseById(courseId));
-  // }, [courseId, dispatch]);
-
   const course =
     currentCourse?.id === courseId
       ? currentCourse

@@ -1,10 +1,5 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import {
-  fetchCourses,
-  fetchCourseById,
-  createCourse,
-  updateCourse,
-} from "./coursesThunks";
+import { createSlice } from "@reduxjs/toolkit";
+import { fetchCourses, createCourse } from "./coursesThunk";
 
 const coursesSlice = createSlice({
   name: "courses",
@@ -14,33 +9,27 @@ const coursesSlice = createSlice({
     loading: false,
     error: null,
   },
-  reducers: {},
+  reducers: {
+    markCourseCompleted: (state, action) => {
+      const courseId = action.payload;
+      const course = state.list.find((course) => course.id === courseId);
+      if (course) {
+        course.progress = 100;
+      }
+    },
+  },
   extraReducers: (builder) => {
     // fetchCourses
     builder
       .addCase(fetchCourses.pending, (state) => {
         state.loading = true;
-        state.error = null;
+        state.error = naull;
       })
       .addCase(fetchCourses.fulfilled, (state, action) => {
         state.loading = false;
         state.list = action.payload;
       })
       .addCase(fetchCourses.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
-      });
-    // fetchCourseById
-    builder
-      .addCase(fetchCourseById.pending, (state) => {
-        state.loading = true;
-        state.error = null;
-      })
-      .addCase(fetchCourseById.fulfilled, (state, action) => {
-        state.loading = false;
-        state.currentCourse = action.payload;
-      })
-      .addCase(fetchCourseById.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
@@ -58,34 +47,8 @@ const coursesSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       });
-    // updateCourse
-    builder
-      .addCase(updateCourse.pending, (state) => {
-        state.loading = true;
-        state.error = null;
-      })
-      .addCase(updateCourse.fulfilled, (state, action) => {
-        state.loading = false;
-        // Update course in list if it exists
-        const index = state.list.findIndex(
-          (course) => course.id === action.payload.id
-        );
-        if (index !== -1) {
-          state.list[index] = action.payload;
-        }
-        // Also update currentCourse (if page is viewed)
-        if (
-          state.currentCourse &&
-          state.currentCourse.id === action.payload.id
-        ) {
-          state.currentCourse = action.payload;
-        }
-      })
-      .addCase(updateCourse.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
-      });
   },
 });
 
+export const { markCourseCompleted } = coursesSlice.actions;
 export default coursesSlice.reducer;

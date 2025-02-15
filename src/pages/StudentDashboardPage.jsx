@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ProgressBar from "../components/ui/ProgressBar";
-import { markCourseCompleted, fetchCourses } from "../store/coursesSlice";
-import LoadingSkeleton from "../components/ui/LoadingSkeleton";
+import { fetchCourses, updateCourse } from "../store/coursesThunk";
 
 const loggedInStudent = {
   id: 123,
@@ -13,25 +12,27 @@ function StudentDashboardPage() {
   const dispatch = useDispatch();
   const { list: courses, loading } = useSelector((state) => state.courses);
 
-  //
   useEffect(() => {
     if (courses.length === 0) {
       dispatch(fetchCourses());
     }
   }, [courses, dispatch]);
 
-  const enrolledCourses = courses.filter((course) =>
-    course.students.some((student) => student.id === loggedInStudent.id)
+  const enrolledCourses = courses.filter(
+    (course) =>
+      course.students &&
+      course.students.some((student) => student.id === loggedInStudent.id)
   );
 
   const handleMarkCompleted = (courseId) => {
-    dispatch(markCourseCompleted(courseId));
+    // Update course progress to 100% in backend
+    dispatch(updateCourse({ courseId, updateData: { progress: 100 } }));
   };
 
   return (
     <div className='container flex flex-col mx-auto mt-8'>
       <h2 className='text-2xl font-bold mb-4'>Student Dashboard</h2>
-      {loading && <LoadingSkeleton count={7} />}
+      {loading && <p>Loading courses...</p>}
       {!loading && enrolledCourses.length
         ? enrolledCourses.map((course) => (
             <div
@@ -53,7 +54,7 @@ function StudentDashboardPage() {
               <div className='mt-8 md:mt-14 md:ml-16'>
                 {course.progress < 100 ? (
                   <button
-                    className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600m'
+                    className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'
                     onClick={() => handleMarkCompleted(course.id)}>
                     Mark as Completed
                   </button>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCourses } from "../store/coursesSlice";
+import { fetchCourses } from "../store/coursesThunk";
 import CourseCard from "../components/core/CourseCard";
 import SearchBar from "../components/ui/SearchBar";
 import LoadingSkeleton from "../components/ui/LoadingSkeleton";

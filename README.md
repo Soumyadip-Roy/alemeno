@@ -161,7 +161,9 @@ POST /api/courses
 ## Notes
 
 - Ensure Firebase credentials are correctly set up.
+- You need to create you own firebase project and Servive Account Keys. (Otherwise it will not fetch courses)
 - Make sure the frontend and backend are connected properly.
-- Modify `vite.config.js` if needed for proxy settings.
 
 ---
+
+Contact : soumyadiproy1611@gmail.com

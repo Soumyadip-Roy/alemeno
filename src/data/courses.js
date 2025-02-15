@@ -1,24 +1,4 @@
 // src/data/coursesData.js
-import img1 from "../assets/img1.png";
-import img2 from "../assets/img2.png";
-import img3 from "../assets/img3.png";
-import img4 from "../assets/img4.png";
-import img5 from "../assets/img5.png";
-import img6 from "../assets/img6.png";
-import img7 from "../assets/img7.png";
-import img8 from "../assets/img8.png";
-import img9 from "../assets/img9.png";
-import img10 from "../assets/img10.png";
-import img11 from "../assets/img11.png";
-import img12 from "../assets/img12.png";
-import img13 from "../assets/img13.png";
-import img14 from "../assets/img14.png";
-import img15 from "../assets/img15.png";
-import img16 from "../assets/img16.png";
-import img17 from "../assets/img17.png";
-import img18 from "../assets/img18.png";
-import img19 from "../assets/img19.png";
-import img20 from "../assets/img20.png";
 
 const coursesData = [
   {
@@ -28,7 +8,7 @@ const coursesData = [
     description:
       "Learn the fundamentals of React Native and build your first mobile app for iOS and Android. This course covers the complete basics of setting up the development environment, understanding React Native components, and designing robust, cross-platform mobile applications. By the end of this immersive 12-week program, you will have the skills to create and deploy your own app to app stores with confidence.",
     enrollmentStatus: "Open",
-    thumbnail: img1,
+    thumbnail: "/assets/img1.png",
     duration: "12 weeks",
     schedule: "Mondays and Wednesdays, 6:00 PM - 8:00 PM",
     location: "Online",
@@ -122,7 +102,7 @@ const coursesData = [
     description:
       "Dive deep into the modern features of JavaScript and discover advanced topics and best practices. This course covers ES6+ syntax, asynchronous programming, and essential design patterns that will help you write cleaner, more efficient code. By the end, you'll have a solid grasp of the latest JS capabilities and how to apply them in real-world projects.",
     enrollmentStatus: "In Progress",
-    thumbnail: img2,
+    thumbnail: "/assets/img2.png",
     duration: "4 weeks",
     schedule: "Tuesdays and Thursdays, 7:00 PM - 9:00 PM",
     location: "Online",
@@ -173,7 +153,7 @@ const coursesData = [
     description:
       "Master the essential data structures and algorithms that form the backbone of efficient software. Throughout this 12-week journey, you will learn how to tackle problems systematically, analyze time and space complexity, and implement critical algorithms used in modern development. This course is ideal for aspiring developers and computer science enthusiasts.",
     enrollmentStatus: "Closed",
-    thumbnail: img3,
+    thumbnail: "/assets/img3.png",
     duration: "12 weeks",
     schedule: "Mondays, Wednesdays, and Fridays, 5:00 PM - 7:00 PM",
     location: "Online",
@@ -270,7 +250,7 @@ const coursesData = [
     description:
       "Enter the world of predictive analytics and intelligent systems with this in-depth course on machine learning. You’ll learn how to explore data, engineer relevant features, and train models using popular Python libraries. By applying these concepts to real-world scenarios, you’ll develop a strong foundation in both theory and practical implementation.",
     enrollmentStatus: "In Progress",
-    thumbnail: img4,
+    thumbnail: "/assets/img4.png",
     duration: "12 weeks",
     schedule: "Tuesdays and Thursdays, 6:30 PM - 8:30 PM",
     location: "Online",
@@ -369,7 +349,7 @@ const coursesData = [
     description:
       "Become a versatile developer by mastering both front-end and back-end technologies. This comprehensive 12-week course covers everything from crafting responsive UIs to building RESTful APIs and managing databases. Whether you aim to work at a startup or an enterprise, you’ll gain the practical skills to develop and deploy full-stack applications.",
     enrollmentStatus: "Open",
-    thumbnail: img5,
+    thumbnail: "/assets/img5.png",
     duration: "12 weeks",
     schedule: "Mondays, Wednesdays, and Fridays, 4:00 PM - 6:00 PM",
     location: "Online",
@@ -466,7 +446,7 @@ const coursesData = [
     description:
       "Delve into the essentials of cybersecurity to protect networks, devices, and data from malicious attacks. This 8-week course focuses on practical skills like recognizing vulnerabilities, encrypting sensitive data, and responding to breaches effectively. Perfect for beginners and IT professionals who want to understand the security landscape.",
     enrollmentStatus: "Open",
-    thumbnail: img6,
+    thumbnail: "/assets/img6.png",
     duration: "8 weeks",
     schedule: "Tuesdays and Thursdays, 5:30 PM - 7:00 PM",
     location: "Online",
@@ -539,7 +519,7 @@ const coursesData = [
     description:
       "Gain a firm grounding in Amazon Web Services, the world’s leading cloud platform. Learn how to deploy virtual machines, store data securely, and implement robust networking solutions. This 4-week crash course will equip you with the skills necessary to launch and manage basic cloud infrastructures on AWS.",
     enrollmentStatus: "In Progress",
-    thumbnail: img7,
+    thumbnail: "/assets/img7.png",
     duration: "4 weeks",
     schedule: "Mondays and Wednesdays, 7:00 PM - 9:00 PM",
     location: "Online",
@@ -592,7 +572,7 @@ const coursesData = [
     description:
       "Designed for aspiring Android developers, this course covers the essentials of creating polished apps for the world’s most popular mobile operating system. Over 12 weeks, you’ll master UI design, background processing, data persistence, and the process of submitting your apps to the Play Store. Elevate your coding skills and bring your ideas to life on Android.",
     enrollmentStatus: "Open",
-    thumbnail: img8,
+    thumbnail: "/assets/img8.png",
     duration: "12 weeks",
     schedule: "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
     location: "Online",
@@ -686,7 +666,7 @@ const coursesData = [
     description:
       "Boost your brand’s online presence by learning the latest digital marketing tactics. This 4-week program delves into search engine optimization, social media marketing, and analytics to help you make data-driven decisions. By the end, you’ll be able to craft compelling campaigns and track their performance across multiple platforms.",
     enrollmentStatus: "In Progress",
-    thumbnail: img9,
+    thumbnail: "/assets/img9.png",
     duration: "4 weeks",
     schedule: "Wednesdays and Fridays, 6:30 PM - 8:00 PM",
     location: "Online",
@@ -735,7 +715,7 @@ const coursesData = [
     description:
       "Explore the groundbreaking technology behind Bitcoin and other cryptocurrencies. Over 8 weeks, you’ll learn about decentralized networks, smart contracts, and how blockchain can revolutionize industries from finance to supply chain. Gain insights into the potential and challenges of this rapidly evolving field.",
     enrollmentStatus: "Open",
-    thumbnail: img10,
+    thumbnail: "/assets/img10.png",
     duration: "8 weeks",
     schedule: "Mondays and Thursdays, 7:30 PM - 9:00 PM",
     location: "Online",
@@ -801,7 +781,6 @@ const coursesData = [
     dueDate: "2025-12-15",
     progress: 0,
   },
-
   {
     id: 11,
     name: "Python for Data Analysis",
@@ -809,7 +788,7 @@ const coursesData = [
     description:
       "Enhance your data skills with Python’s powerful libraries like Pandas, NumPy, and Matplotlib. Over the course of 6 weeks, you’ll learn how to import datasets, clean and transform data, and visualize results for insightful decision-making. Whether you’re a data enthusiast or looking to sharpen your analytics edge, this course will help you thrive.",
     enrollmentStatus: "Open",
-    thumbnail: img11,
+    thumbnail: "/assets/img11.png",
     duration: "6 weeks",
     schedule: "Mondays and Wednesdays, 5:00 PM - 7:00 PM",
     location: "Online",
@@ -867,7 +846,7 @@ const coursesData = [
     description:
       "Transform your creative ideas into intuitive digital experiences. This course covers the core principles of user interface and user experience design, including usability, wireframing, and visual hierarchy. By applying these methodologies to real-world projects, you’ll learn to create interfaces that not only look good but also function seamlessly.",
     enrollmentStatus: "In Progress",
-    thumbnail: img12,
+    thumbnail: "/assets/img12.png",
     duration: "8 weeks",
     schedule: "Tuesdays and Thursdays, 7:30 PM - 9:00 PM",
     location: "Online",
@@ -944,7 +923,7 @@ const coursesData = [
     description:
       "Embrace continuous integration and continuous deployment to deliver software faster and more reliably. This hands-on course teaches you how to set up Jenkins pipelines, automate builds, and integrate testing. You’ll gain an end-to-end understanding of modern DevOps culture and the tools that make efficient development lifecycles possible.",
     enrollmentStatus: "Open",
-    thumbnail: img13,
+    thumbnail: "/assets/img13.png",
     duration: "6 weeks",
     schedule: "Mondays and Wednesdays, 6:00 PM - 8:00 PM",
     location: "Online",
@@ -1005,7 +984,7 @@ const coursesData = [
     description:
       "Stay at the cutting edge of Android development by learning Kotlin, Google’s preferred language for Android apps. This 8-week course dives into Kotlin’s expressive syntax, safety features, and interoperability with Java. You’ll refactor existing projects and build new apps from scratch, harnessing Kotlin’s concise and powerful capabilities.",
     enrollmentStatus: "In Progress",
-    thumbnail: img14,
+    thumbnail: "/assets/img14.png",
     duration: "8 weeks",
     schedule: "Tuesdays and Thursdays, 6:30 PM - 8:30 PM",
     location: "Online",
@@ -1078,7 +1057,7 @@ const coursesData = [
     description:
       "Containerization and orchestration have become critical for deploying scalable applications. In this 6-week course, learn how to build Docker images, share them on Docker Hub, and use Kubernetes to manage multi-container workloads. Gain practical skills through hands-on labs that will prepare you to tackle cloud-native development and deployment challenges.",
     enrollmentStatus: "Open",
-    thumbnail: img15,
+    thumbnail: "/assets/img15.png",
     duration: "6 weeks",
     schedule: "Mondays and Thursdays, 5:00 PM - 7:00 PM",
     location: "Online",
@@ -1139,7 +1118,7 @@ const coursesData = [
     description:
       "Step into the future of interactive media by mastering the fundamentals of Augmented and Virtual Reality. Over 8 weeks, you’ll explore industry-standard tools like Unity and learn how to create immersive experiences for gaming, training, and beyond. This course is perfect for creative technologists and innovators looking to expand their skill set.",
     enrollmentStatus: "In Progress",
-    thumbnail: img16,
+    thumbnail: "/assets/img16.png",
     duration: "8 weeks",
     schedule: "Wednesdays and Fridays, 6:00 PM - 8:00 PM",
     location: "Online",
@@ -1212,7 +1191,7 @@ const coursesData = [
     description:
       "Turn raw data into actionable insights with Tableau. In this 4-week intensive course, learn to create interactive dashboards, use calculated fields, and design compelling visuals. Whether you’re in business intelligence, marketing, or finance, Tableau will help you communicate data findings more effectively to stakeholders.",
     enrollmentStatus: "Open",
-    thumbnail: img17,
+    thumbnail: "/assets/img17.png",
     duration: "4 weeks",
     schedule: "Mondays and Wednesdays, 7:00 PM - 9:00 PM",
     location: "Online",
@@ -1258,7 +1237,7 @@ const coursesData = [
     description:
       "Dive into the world of Salesforce administration and learn how to customize the platform for business needs. Over 6 weeks, you’ll discover how to configure objects, manage security settings, create automated workflows, and generate reports. By course end, you’ll be ready to streamline processes and support organizational success using Salesforce.",
     enrollmentStatus: "In Progress",
-    thumbnail: img18,
+    thumbnail: "/assets/img18.png",
     duration: "6 weeks",
     schedule: "Tuesdays and Thursdays, 5:30 PM - 7:00 PM",
     location: "Online",
@@ -1319,7 +1298,7 @@ const coursesData = [
     description:
       "Venture into deep learning with TensorFlow, one of the most popular libraries for building neural networks. Across 10 weeks, you’ll develop an understanding of convolutional networks for image recognition, recurrent networks for sequence modeling, and more. By the end, you’ll be equipped to tackle complex AI problems with confidence and clarity.",
     enrollmentStatus: "Open",
-    thumbnail: img19,
+    thumbnail: "/assets/img19.png",
     duration: "10 weeks",
     schedule: "Wednesdays and Fridays, 7:00 PM - 9:00 PM",
     location: "Online",
@@ -1404,7 +1383,7 @@ const coursesData = [
     description:
       "Learn how to handle massive datasets using Hadoop, the reliable and scalable open-source framework. Over 8 weeks, you’ll explore HDFS, MapReduce, YARN, and the Hadoop ecosystem, including tools like Hive and Pig. Gain the skills to store, process, and analyze huge amounts of data, paving your way into a career in Big Data engineering.",
     enrollmentStatus: "In Progress",
-    thumbnail: img20,
+    thumbnail: "/assets/img20.png",
     duration: "8 weeks",
     schedule: "Mondays and Thursdays, 8:00 PM - 9:30 PM",
     location: "Online",

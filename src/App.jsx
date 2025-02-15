@@ -1,11 +1,11 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/core/Navbar";
 import CourseListingPage from "./pages/CourseListingPage";
 import CourseDetailsPage from "./pages/CourseDetailsPage";
 import StudentDashboardPage from "./pages/StudentDashboardPage";
-import Footer from "./components/Footer";
+import Footer from "./components/core/Footer";
 
 function App() {
   return (

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCourses } from "../store/coursesSlice";
-import CourseCard from "../components/CourseCard";
-import SearchBar from "../components/SearchBar";
+import CourseCard from "../components/core/CourseCard";
+import SearchBar from "../components/ui/SearchBar";
+import LoadingSkeleton from "../components/ui/LoadingSkeleton";
 
 function CourseListingPage() {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ function CourseListingPage() {
     error,
   } = useSelector((state) => state.courses);
   const [filteredCourses, setFilteredCourses] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Fetch courses
   useEffect(() => {
@@ -20,13 +22,8 @@ function CourseListingPage() {
     }
   }, [courses, dispatch]);
 
-  // Filtered courses
+  // Filter courses when search term changes
   useEffect(() => {
-    setFilteredCourses(courses);
-  }, [courses]);
-
-  // Search
-  const handleSearch = (searchTerm) => {
     if (!searchTerm) {
       setFilteredCourses(courses);
     } else {
@@ -38,36 +35,29 @@ function CourseListingPage() {
       );
       setFilteredCourses(filtered);
     }
-  };
-
-  // a utility function to shuffle the courses :)
-  const shuffleCourses = (courses) => {
-    for (let i = courses.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [courses[i], courses[j]] = [courses[j], courses[i]];
-    }
-    return courses;
-  };
+  }, [searchTerm, courses]);
 
   return (
     <div className='container flex flex-col mx-auto mt-8'>
       <h2 className='text-2xl font-bold mb-4'>Courses</h2>
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSearch={setSearchTerm} />
 
-      {loading && <p>Loading courses...</p>}
-      {!loading && error && <p>Error loading courses: {error}</p>}
-      {!loading && !error && (
-        <>
-          {filteredCourses.length ? (
-            <div>
-              {shuffleCourses([...filteredCourses]).map((course) => (
-                <CourseCard key={course.id} course={course} />
-              ))}
-            </div>
-          ) : (
-            <p>No courses found.</p>
-          )}
-        </>
+      {loading ? (
+        <LoadingSkeleton count={6} />
+      ) : error ? (
+        <p>Error loading courses: {error}</p>
+      ) : filteredCourses.length ? (
+        <div>
+          {filteredCourses.map((course) => (
+            <CourseCard
+              key={course.id}
+              course={course}
+              searchTerm={searchTerm}
+            />
+          ))}
+        </div>
+      ) : (
+        <p>No courses found.</p>
       )}
     </div>
   );

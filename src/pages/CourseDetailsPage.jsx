@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import ExpandableSyllabus from "../components/ExpandableSyllabus";
-import StatusBadge from "../components/StatusBadge";
+import ExpandableSyllabus from "../components/ui/ExpandableSyllabus";
+import StatusBadge from "../components/ui/StatusBadge";
 import { fetchCourses } from "../store/coursesSlice";
+import LoadingSkeleton from "../components/ui/LoadingSkeleton";
 
 function CourseDetailsPage() {
   const { courseId } = useParams();
@@ -19,7 +20,7 @@ function CourseDetailsPage() {
   const course = courses.find((c) => c.id === parseInt(courseId));
 
   if (loading) {
-    return <p>Loading course details...</p>;
+    return <LoadingSkeleton />;
   }
 
   if (!course) {

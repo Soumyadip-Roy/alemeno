@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ProgressBar from "../components/ProgressBar";
+import ProgressBar from "../components/ui/ProgressBar";
 import { markCourseCompleted, fetchCourses } from "../store/coursesSlice";
+import LoadingSkeleton from "../components/ui/LoadingSkeleton";
 
 const loggedInStudent = {
   id: 123,
@@ -30,7 +31,7 @@ function StudentDashboardPage() {
   return (
     <div className='container flex flex-col mx-auto mt-8'>
       <h2 className='text-2xl font-bold mb-4'>Student Dashboard</h2>
-      {loading && <p>Loading courses...</p>}
+      {loading && <LoadingSkeleton count={7} />}
       {!loading && enrolledCourses.length
         ? enrolledCourses.map((course) => (
             <div

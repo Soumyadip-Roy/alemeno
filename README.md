@@ -114,12 +114,6 @@ Access the application at: `http://localhost:5173`.
 GET /api/courses
 ```
 
-#### Get a Specific Course
-
-```http
-GET /api/courses/:id
-```
-
 #### Create a Course
 
 ```http
